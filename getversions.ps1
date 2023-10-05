@@ -27,20 +27,19 @@ $form.Height = 600
 # Create a label
 $label = New-Object System.Windows.Forms.Label
 $label.Location = New-Object System.Drawing.Point(10, 10)
-$label.Size = New-Object System.Drawing.Size(200, 20)
+$label.Size = New-Object System.Drawing.Size(245, 20)
 $label.Text = "Select OS Version:"
 $form.Controls.Add($label)
 
 # Create a ComboBox for OS version
 $comboBox = New-Object System.Windows.Forms.ComboBox
 $comboBox.Location = New-Object System.Drawing.Point(10, 30)
-$comboBox.Size = New-Object System.Drawing.Size(200, 20)
+$comboBox.Size = New-Object System.Drawing.Size(225, 20)
 $comboBox.Items.AddRange(@(
     "Windows 10,11,2022,2019,2016 (10.0*)",     
     "Windows 8.1, 2012R2 (6.3*)",     
     "Windows 8,2012 (6.2)",       
-    "Windows 7 (6.1)",  
-    "Windows Server 2008 R2 (6.1)",   
+    "Windows Server 2008 R2, Windows 7 (6.1)",   
     "Windows Server 2008, Vista (6.0)",   
     "Windows Server 2003, XP64 (5.2)",         
     "Windows XP32 (5.1)",    
@@ -65,7 +64,7 @@ $dataGridView.Columns.Add("OU", "OU")
 
 # Create a "Run" button
 $runButton = New-Object System.Windows.Forms.Button
-$runButton.Location = New-Object System.Drawing.Point(225, 30)
+$runButton.Location = New-Object System.Drawing.Point(245, 30)
 $runButton.Size = New-Object System.Drawing.Size(75, 20)
 $runButton.Text = "Run"
 $runButton.Add_Click({
